@@ -32,3 +32,7 @@ spec:
     requests:
       storage: {{ .Values.db.persistence.size }}
 {{- end }}
+  securitycontext:
+    fsGroup: 2000
+    runAsNonRoot: true
+    runAsUser: 1000
