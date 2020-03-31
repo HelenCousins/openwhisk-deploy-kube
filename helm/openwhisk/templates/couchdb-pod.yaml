@@ -68,11 +68,11 @@ spec:
               key: db_password
         - name: "NODENAME"
           value: "couchdb0"
-        {{- if .Values.k8s.persistence.enabled }}
-        volumeMounts:
-          - name: database-storage
-            mountPath: /opt/couchdb/data
-        {{- end }}
+#        {{- if .Values.k8s.persistence.enabled }}
+#        volumeMounts:
+#          - name: database-storage
+#            mountPath: /opt/couchdb/data
+#        {{- end }}
       {{- if .Values.k8s.persistence.enabled }}
       volumes:
         - name: database-storage
